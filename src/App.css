@@ -1,0 +1,10 @@
+.submitbutton {
+        height: 40;
+        width: 150;
+        border-color: 'black';
+        border-style: 'double';
+        border-radius: 10;
+        background: '#5b0d0d';
+        font-size: 16;
+        color: 'white';
+}
