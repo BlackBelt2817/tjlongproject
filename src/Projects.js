@@ -18,14 +18,14 @@ export default class Projects extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                     }}>
-                        <a target="_blank" href='https://lambdashowcase.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Lambda Showcase (Capstone)</Button></a>
+                        <center><small style={{color: 'red'}}>Lambda School Capstone:</small></center>
+                        <a target="_blank" href='https://lambdashowcase.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Lambda Showcase</Button></a>
                         <p />
-
-                        {/*<h3>Lambda School CS2:</h3>
-                        <input type="submit" value="Personal Project" style={{width: 300, height: 30, borderRadius: 10}} />
-                        <p />*/}
-
-                        <a target="_blank" href='https://github.com/LambdaGuitar'><Button value="LambdaGuitar" style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>LambdaGuitar</Button></a>
+                        <center><small style={{color: 'red'}}>Lambda School Hackathon:</small></center>
+                        <a target="_blank" href='https://github.com/LambdaGuitar'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>LambdaGuitar</Button></a>
+                        <p />
+                        <center><small style={{color: 'red'}}>Simple App utilizing Urban Dictionary API:</small></center>
+                        <a target="_blank" href='https://ruralreference.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Rural Reference</Button></a>
                         <p />
                     </form>
                 </div>
