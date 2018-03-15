@@ -27,7 +27,7 @@ export default class Projects extends Component {
                         <center><small style={{color: 'red'}}>Simple App utilizing Urban Dictionary API:</small></center>
                         <a target="_blank" href='https://ruralreference.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Rural Reference</Button></a>
                         <p />
-                        <center><small style={{color: 'red'}}>Simpsons quote generator:</small></center>
+                        <center><small style={{color: 'red'}}>Simpsons Quote Generator:</small></center>
                         <a target="_blank" href='https://simpsonsquotes.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Rural Reference</Button></a>
                         <p />
                     </form>
