@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { Button } from 'react-bootstrap';
+
 
 import Home from './Home.js';
 import Projects from './Projects.js';
@@ -31,9 +31,6 @@ const TopRoutes = () => (
 );
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
