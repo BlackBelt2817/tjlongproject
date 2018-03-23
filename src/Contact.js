@@ -52,12 +52,10 @@ export default class Contact extends Component {
                 },
                 "user_YvKjNICDfNLcPPp4CEM0J"
 						);
-						
-						document.getElementById("inputform").reset();
 
 						alertify.alert('Contact Form', `Thank you for your inquiry, ${name}. Your email has been sent!`);
 
-
+						console.log('Thanks for visiting! :)');
         }
     }
 
