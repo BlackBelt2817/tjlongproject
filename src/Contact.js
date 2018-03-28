@@ -18,7 +18,11 @@ export default class Contact extends Component {
 						firstName: ''
         };
         this.handleClick = this.handleClick.bind(this);
-    }    
+    }
+
+    handleRedirect() {
+        window.location = '/contact';
+    }
 
     handleClick() {
         if (this.state.name === ''){
@@ -53,9 +57,11 @@ export default class Contact extends Component {
                 "user_YvKjNICDfNLcPPp4CEM0J"
 						);
 
-						alertify.alert('Contact Form', `Thank you for your inquiry, ${name}. Your email has been sent!`);
-
-						console.log('Thanks for visiting! :)');
+                        alertify.alert('Contact Form', `Thank you for your inquiry, ${name}. Your email has been sent!`, () => {
+                            console.log('Thanks for visiting! :)');
+                            window.location.replace('/contact');
+                        });
+                        
         }
     }
 
