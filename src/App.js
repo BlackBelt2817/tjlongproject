@@ -12,13 +12,13 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const TopRoutes = () => (
 	<Router>
-		<div >
+		<div>
 			<div style={{borderBottomColor: 'white', borderBottomStyle: 'solid', backgroundColor: 'black', listStyleType: 'none', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', paddingBottom: 10}}>
-				<LinkContainer style={{cursor: 'pointer', fontSize: 28, borderColor: 'black', color: 'white', background: '#5b0d0d', borderRadius: 10}} to="/"><button>Home</button></LinkContainer>
-				<LinkContainer style={{cursor: 'pointer', fontSize: 28, borderColor: 'black', color: 'white', background: '#5b0d0d', borderRadius: 10}} to="/projects"><button>Projects</button></LinkContainer>
+				<LinkContainer to="/"><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Home</button></LinkContainer>
+				<LinkContainer to="/projects"><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Projects</button></LinkContainer>
 				{/*<a target='_blank' href='https://www.linkedin.com/in/tyler-long-61205289/detail/treasury/summary/?entityUrn=urn%3Ali%3Afs_treasuryMedia%3A(ACoAABKxte4BpWBI7WTqgT1dhsBQw2J0NZs4uCU%2C1517420080081)'><Button style={{cursor: 'pointer', fontSize: 28, borderColor: 'black', color: 'white', background: '#5b0d0d', borderRadius: 10}}>Résumé</Button></a>*/}
-                <LinkContainer style={{cursor: 'pointer', fontSize: 28, borderColor: 'black', color: 'white', background: '#5b0d0d', borderRadius: 10}} to="/resume"><button>Résumé</button></LinkContainer>
-                <LinkContainer style={{cursor: 'pointer', fontSize: 28, borderColor: 'black', color: 'white', background: '#5b0d0d', borderRadius: 10}} to="/contact"><button>Contact Me</button></LinkContainer>
+                <LinkContainer to="/resume"><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Résumé</button></LinkContainer>
+                <LinkContainer to="/contact"><button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Contact Me</button></LinkContainer>
 
 			</div>
 			<Route exact path="/" component={Home} />

@@ -14,8 +14,9 @@ export default class Contact extends Component {
             name: '',
             message: '',
             email: '',
-						subject: '',
-						firstName: ''
+            subject: '',
+            firstName: '',
+            validEmail: false
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -68,16 +69,41 @@ export default class Contact extends Component {
     render () {
         return (
             <div>
-                <h1 style={{textAlign:'center'}} >Contact Me</h1>
-								<div style={{textAlign:'center'}}>
-										<input style={{fontSize: 20, borderRadius: 4}} type="text" placeholder="Name:" value={this.state.name} onChange={e => this.setState({name: e.target.value})} /><br />
-										<input style={{fontSize: 20, borderRadius: 4}} type="text" placeholder="Subject:" value={this.state.subject} onChange={e => this.setState({subject: e.target.value})} /><br />
-										<input style={{fontSize: 20, borderRadius: 4}} type="text" placeholder="Email:" value={this.state.email} onChange={e => this.setState({email: e.target.value})} /><br />
-										<textarea onChange={e => {this.setState({message: e.target.value})}} style={{fontSize: 24, borderRadius: 2}} cols="30" rows="5" placeholder="Enter Your Message here..." type="text" name="message" id="message"/><br />
-										<Button type='submit' id="submitbutton" onClick={this.handleClick}>Submit</Button>
-										<h3 style={{marginTop: 50, color: 'white'}}>{this.state.name !== '' ? null : <i>**Name required</i>}</h3>
-										<h3 style={{color: 'white'}}>{this.state.email !== '' ? null : <i>**Email required</i>}</h3>
-										<h3 style={{color: 'white'}}>{this.state.message !== '' ? null : <i>**Message required</i>}</h3>
+                <h2 style={{textAlign:'center'}} >Contact Me</h2>
+                <div style={{textAlign: 'center'}}>
+                    <div className="mdl-textfield mdl-js-textfield">
+                        <input style={{background: 'white', color: 'black'}} className="mdl-textfield__input" type="text" id="name" value={this.state.name} onChange={e => this.setState({name: e.target.value})} />
+                        <label class="mdl-textfield__label" for="name">Name...</label>
+                    </div><br />
+                    <div className="mdl-textfield mdl-js-textfield">
+                        <input style={{background: 'white', color: 'black'}} className="mdl-textfield__input" type="text" id="subject" value={this.state.subject} onChange={e => this.setState({subject: e.target.value})} />
+                        <label class="mdl-textfield__label" for="subject">Subject...</label>
+                    </div><br />
+                    <div className="mdl-textfield mdl-js-textfield">
+                        <input style={{background: 'white', color: 'black'}} className="mdl-textfield__input" type="text" id="email" value={this.state.email}
+                        onChange={
+                            e => this.setState({email: e.target.value}, () => {
+                                let emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.exec(this.state.email);
+                                if (emailRegEx !== null) {
+                                    this.setState({ validEmail: true});
+                                } else {
+                                    this.setState({ validEmail: false });
+                                }
+                            })
+                        } />
+                        <label class="mdl-textfield__label" for="email">Email...</label>
+                    </div><br />
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <textarea onChange={e => {this.setState({message: e.target.value})}} style={{background: 'white', color: 'black'}} class="mdl-textfield__input" type="text" rows="3" maxrows="10" id="message"></textarea>
+                        <label class="mdl-textfield__label" for="message">Message...</label>
+                    </div><br />
+                    <button id="newbutton" className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type='submit' onClick={this.handleClick}>Submit</button>
+                    <h5 style={{marginTop: 50, color: 'white'}}>{this.state.name !== '' ? null : <i>**Name required</i>}</h5>
+                    <h5 style={{color: 'white'}}>{(this.state.email !== '' && this.state.validEmail === true) ? null : <i>**Valid email required</i>}</h5>
+                    <h5 style={{color: 'white'}}>{this.state.message !== '' ? null : <i>**Message required</i>}</h5>
+                    
+                        
+                    
                 </div>
             </div>
         );

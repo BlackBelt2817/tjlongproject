@@ -11,7 +11,7 @@ export default class Projects extends Component {
     render () {
         return (
             <div>
-                <h1 style={{display: 'flex', justifyContent: 'center'}}>Projects</h1>
+                <h2 style={{display: 'flex', justifyContent: 'center'}}>Projects</h2>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
                     <form style={{
                         width: 250,
