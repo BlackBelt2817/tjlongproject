@@ -18,21 +18,46 @@ export default class Projects extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                     }}>
-                        <center><small style={{color: 'red'}}>Lambda School Capstone:</small></center>
-                        <a target="_blank" rel="noopener noreferrer" href='https://lambdashowcase.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Lambda Showcase</Button></a>
-                        <p />
-                        <center><small style={{color: 'red'}}>Brew Dog Craft Beer Lookup:</small></center>
-                        <a target="_blank" rel="noopener noreferrer" href='https://lagerlogger.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Lager Logger</Button></a>
-                        <p />
-                        <center><small style={{color: 'red'}}>Lambda School Hackathon:</small></center>
-                        <a target="_blank" rel="noopener noreferrer" href='https://github.com/LambdaGuitar'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>LambdaGuitar</Button></a>
-                        <p />
-                        <center><small style={{color: 'red'}}>Simple App utilizing Urban Dictionary API:</small></center>
-                        <a target="_blank" rel="noopener noreferrer" href='https://ruralreference.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Rural Reference</Button></a>
-                        <p />
-                        <center><small style={{color: 'red'}}>Simpsons Quote Generator:</small></center>
-                        <a target="_blank" rel="noopener noreferrer" href='https://simpsonsquotes.herokuapp.com/'><Button style={{ cursor: 'pointer', width: 300, height: 30, borderRadius: 10}}>Simpsons Quotes</Button></a>
-                        <p />
+
+                        <div class="mdl-list">
+                            <div class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <span className='project-list'>Lambda Showcase</span>
+                                </span>
+                                <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://lambdashowcase.herokuapp.com/'><i class="material-icons">code</i></a>
+                            </div>
+                            <div class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <span className='project-list'>Lager Logger</span>
+                                </span>
+                                <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://lagerlogger.herokuapp.com/'><i class="material-icons">code</i></a>
+                            </div>
+                            <div class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <span className='project-list'>LambdaGuitar</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://github.com/LambdaGuitar'><i class="material-icons">code</i></a>
+                                </span>
+                            </div>
+                            <div class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <span className='project-list'>Rural Reference</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://ruralreference.herokuapp.com/'><i class="material-icons">code</i></a>
+                                </span>
+                            </div>
+                            <div class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    <span className='project-list'>Simpsons Quotes</span>
+                                </span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://simpsonsquotes.herokuapp.com/'><i class="material-icons">code</i></a>
+                                </span>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -41,12 +66,3 @@ export default class Projects extends Component {
     }
 }
 
-/*
-
-    <form action="/create" method="post">
-        Name: <input type="text" name="name"><br>
-        Content:<br><textarea name="content" cols="80" rows="10"></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
-
-*/

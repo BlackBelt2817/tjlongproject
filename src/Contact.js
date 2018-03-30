@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
 import './App.css';
 // import axios from 'axios';
 require('dotenv').config();
@@ -33,18 +32,18 @@ export default class Contact extends Component {
         } else if (this.state.message === '') {
             return alertify.error('You must include a message!');
         } else {
-					let name = this.state.name;
-					name = name.split(' ');
-					name = name[0];
-					name = name.split('');
-					name[0] = name[0].toUpperCase();
-					if (name.length > 1) {
-						for (let i = 1; i < name.length; i++) {
-							name[i] = name[i].toLowerCase();
-						}
-					}
-					name = name.join('');
-					alertify.alert();
+            let name = this.state.name;
+            name = name.split(' ');
+            name = name[0];
+            name = name.split('');
+            name[0] = name[0].toUpperCase();
+            if (name.length > 1) {
+                for (let i = 1; i < name.length; i++) {
+                    name[i] = name[i].toLowerCase();
+                }
+            }
+            name = name.join('');
+            alertify.alert();
             emailjs.send(
                 "gmail",
                 "gmail_to_me",
