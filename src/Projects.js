@@ -18,19 +18,22 @@ export default class Projects extends Component {
                         display: 'flex',
                         flexDirection: 'column',
                     }}>
-
                         <div class="mdl-list">
                             <div class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
                                     <span className='project-list'>Lambda Showcase</span>
                                 </span>
-                                <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://lambdashowcase.herokuapp.com/'><i class="material-icons">code</i></a>
+                                <span class="mdl-list__item-secondary-content">
+                                    <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://lambdashowcase.herokuapp.com/'><i class="material-icons">code</i></a>
+                                </span>
                             </div>
                             <div class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
                                     <span className='project-list'>Lager Logger</span>
                                 </span>
-                                <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://lagerlogger.herokuapp.com/'><i class="material-icons">code</i></a>
+                                <span class="mdl-list__item-secondary-content">
+                                    <a class="mdl-list__item-secondary-action" target="_blank" rel="noopener noreferrer" href='https://lagerlogger.herokuapp.com/'><i class="material-icons">code</i></a>
+                                </span>
                             </div>
                             <div class="mdl-list__item">
                                 <span class="mdl-list__item-primary-content">
